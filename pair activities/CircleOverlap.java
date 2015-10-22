@@ -17,7 +17,7 @@ public class CircleOverlap
       double xcenter2 = 40;
       double ycenter2 = 0;
       
-      final double distace = Math.sqrt(pow(abs(xcenter2 - xcenter1),2.0))+ (pow(abs(ycenter2-ycenter1),2.0));
+      final double distace = Math.sqrt(Math.pow(abs(xcenter2 - xcenter1),2.0))+ (Math.pow(abs(ycenter2-ycenter1),2.0));
 
       // Your work goes here
       
@@ -25,17 +25,17 @@ public class CircleOverlap
       {
          System.out.println("the two circles are Disjoint");      
       }
-      else if (radius1 > radius2 + distace)
+      else if (radius1 > (radius2 + distace))
       {
          System.out.println("The two circles are mutually contained");
       }
-      else if (radius2 > radius1 + distace)
+      else if (radius2 > (radius1 + distace))
       {
           System.out.println("The two circles are mutually contained");
       }
-      else if (radius1 + radius2 >= distace && !(radius1 > radius2 + distace) && !(radius2 > radius1 + distace));
+      else if ((radius1 + radius2) >= distace && !(radius1 > (radius2 + distace) && !(radius2 > (radius1 + distace))))
       {
-      System.out.println("The two circles are mutually contained");
+      System.out.println("The two circles are overlapping");
       }
    }
 }
